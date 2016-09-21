@@ -14,8 +14,8 @@ set cursorline
 set relativenumber
 
 " Custom Movements
-nnoremap B ^ " move to beginning of line
-nnoremap E $ " move to end of line
+nnoremap B ^
+nnoremap E $
 
 " Disabled Keys
 nnoremap $ <nop>
