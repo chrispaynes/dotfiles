@@ -1,0 +1,25 @@
+# TERMINAL ENVIRONMENT ALIASES
+alias ll="ls -lahFGo"
+alias bp="vim ~/.bash_profile"
+alias zp="vim ~/.zsh_profile"
+alias szp="source ~/.zsh_profile"
+alias op="open ."
+
+# NAVIGATIONAL ALIASES
+alias ..="cd .. && ls"
+alias ...="cd ../.. && ls"
+
+# GIT ALIASES
+alias glp1="git log --pretty=oneline"
+alias glst="git log --stat"
+alias ga="git add"
+alias gd="git diff"
+alias gp="git push"
+alias gs="git status -s"
+alias gsh="git show"
+alias gcm="git commit -m"
+
+# APPLICATION ALIASES
+alias subl=" open -a 'Sublime Text' -n ."
+alias docs="cd ~/Documents"
+alias desk="cd ~/Desktop"
