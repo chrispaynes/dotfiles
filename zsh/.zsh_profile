@@ -1,15 +1,40 @@
-# TERMINAL ENVIRONMENT ALIASES
+# APACHE SERVER
+alias apache.start="sudo apachectl start"
+alias apache.stop="sudo apachectl stop"
+alias apache.status="sudo apachectl status"
+alias apache.elog="tail -f /var/log/apache2/error.log"
+
+# APPS
+alias subl=" open -a 'Sublime Text' -n ."
+
+# CLI
+alias t.="tree"
+
+# NAVIGATION
+alias ..="cd .. && ls"
+
+# NETWORKING
+alias ports='netstat -tulanp'
+
+# POSTGRESL
+alias pg.start="sudo /etc/init.d/postgresql start"
+alias pg.stop="sudo /etc/init.d/postgresql stop"
+alias pg.restart="sudo /etc/init.d/postgresql restart"
+alias pg.conf_backup="cp pg_hba.conf pg_hba.conf-backup"
+alias pg.connect="psql -h 127.0.0.1 -U postgres"
+
+# SERVICES
+alias svc.all="service --status-all"
+
+# TERMINAL ENVIRONMENT
+alias c="clear"
+alias hg="history | grep "
 alias ll="ls -lahFGo"
-alias bp="vim ~/.bash_profile"
 alias zp="vim ~/.zsh_profile"
 alias szp="source ~/.zsh_profile"
 alias op="open ."
 
-# NAVIGATIONAL ALIASES
-alias ..="cd .. && ls"
-alias ...="cd ../.. && ls"
-
-# GIT ALIASES
+# GIT
 alias glp1="git log --pretty=oneline"
 alias glst="git log --stat"
 alias ga="git add"
@@ -18,8 +43,3 @@ alias gp="git push"
 alias gs="git status -s"
 alias gsh="git show"
 alias gcm="git commit -m"
-
-# APPLICATION ALIASES
-alias subl=" open -a 'Sublime Text' -n ."
-alias docs="cd ~/Documents"
-alias desk="cd ~/Desktop"
