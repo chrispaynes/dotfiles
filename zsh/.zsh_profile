@@ -1,45 +1,25 @@
-# APACHE SERVER
-alias apache.start="sudo apachectl start"
-alias apache.stop="sudo apachectl stop"
-alias apache.status="sudo apachectl status"
-alias apache.elog="tail -f /var/log/apache2/error.log"
+# import aliases
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
+fi
 
-# APPS
-alias subl=" open -a 'Sublime Text' -n ."
+# set color
+export TERM=xterm-256color
 
-# CLI
-alias t.="tree"
+# mySQL
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 
-# NAVIGATION
-alias ..="cd .. && ls"
+# Node
+export NVM_DIR="/Users/Admin/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# NETWORKING
-alias ports='netstat -tulanp'
+# Golang
+export GOROOT="/usr/local/go"
+export GOPATH=$HOME/go_workspace
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-# POSTGRESL
-alias pg.start="sudo /etc/init.d/postgresql start"
-alias pg.stop="sudo /etc/init.d/postgresql stop"
-alias pg.restart="sudo /etc/init.d/postgresql restart"
-alias pg.conf_backup="cp pg_hba.conf pg_hba.conf-backup"
-alias pg.connect="psql -h 127.0.0.1 -U postgres"
+# Python
+export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 
-# SERVICES
-alias svc.all="service --status-all"
-
-# TERMINAL ENVIRONMENT
-alias c="clear"
-alias hg="history | grep "
-alias ll="ls -lahFGo"
-alias zp="vim ~/.zsh_profile"
-alias szp="source ~/.zsh_profile"
-alias op="open ."
-
-# GIT
-alias glp1="git log --pretty=oneline"
-alias glst="git log --stat"
-alias ga="git add"
-alias gd="git diff"
-alias gp="git push"
-alias gs="git status -s"
-alias gsh="git show"
-alias gcm="git commit -m"
+# PHP
+export PATH="$(brew --prefix homebrew/php/php70)/bin/php:$PATH"
