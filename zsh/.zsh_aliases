@@ -1,0 +1,75 @@
+# APACHE SERVER
+alias apache.start="sudo apachectl start"
+alias apache.stop="sudo apachectl stop"
+alias apache.status="sudo apachectl status"
+alias apache.elog="tail -f /var/log/apache2/error.log"
+
+# APPLICATIONS
+alias subl=" open -a 'Sublime Text' -n ."
+alias chrome=" open -a Google\ Chrome --args --incognito"
+
+# ELIXIR and ERLANG
+alias mps="mix phoenix.server"
+
+# GIT
+alias git.logPretty="git log --pretty=oneline"
+alias git.logGraph="--pretty=oneline --graph --decorate --all"
+alias gl="git log --stat"
+alias gb="git branch"
+alias gco="git checkout"
+alias gcm="git checkout master"
+alias gd="git diff"
+alias gp="git push"
+alias gs="git status"
+alias gsh="git show"
+alias gt="vim ~/.gittutor.txt"
+alias wbt="stg && cat .__webtoken.md"
+alias gwc="git whatchanged"
+
+# GIT FUNCTIONS
+# gcmsg writes a commit message.
+function gcmsg() { git commit -m  "$1"; git status };
+
+# grH resets an file arg. to the last commit snapshot.
+function grH() { git reset HEAD "$1"; git status; };
+
+# ga adds an file arg. to the index.
+function ga() { git add "$1"; git status; };
+
+# grm removes a file arg from the index.
+function grm() { git rm "$1"; git status; };
+
+# GOLANG
+alias go.play="echo 'Go play on http://localhost:1337' && godoc -http=:1337 -play -index" 
+
+# NETWORKING
+alias ports='netstat -tulanp'
+
+# WEB DEV
+alias coursework="cd ~/Documents/GITHUB/coursework"
+alias xampp.start="sudo /Applications/XAMPP/xamppfiles/xampp start"
+alias xampp.stop="sudo /Applications/XAMPP/xamppfiles/xampp stop"
+
+# POSTGRESL
+alias pg.start="sudo /etc/init.d/postgresql start"
+alias pg.stop="sudo /etc/init.d/postgresql stop"
+alias pg.restart="sudo /etc/init.d/postgresql restart"
+alias pg.conf_backup="cp pg_hba.conf pg_hba.conf-backup"
+alias pg.connect="psql -h 127.0.0.1 -U postgres"
+
+# SERVICES
+alias svc.all="service --status-all"
+
+# TERMINAL
+alias ll="ls -lahFGo"
+alias hg="history | grep "
+alias eza="vim ~/.zsh_aliases"
+alias szsh="source ~/.zsh_*"
+alias ..="cd .. && ls"
+alias op="open ."
+alias t.="tree ."
+
+# UTILITY
+alias dnsflush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
+alias disableWindowAnimations="defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false"
+alias disableDashboard="defaults write com.apple.dashboard mcx-disabled -boolean YES killall Dock"
