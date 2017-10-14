@@ -2,9 +2,16 @@
 alias dk=docker
 
 # KUBERNETES
-alias kctl=kubectl
-alias kgp="kctl get pod"
-alias kgd="kctl get deployments"
+alias kctl='kubectl'
+alias kg="kctl get"
+alias kd="kctl describe"
+alias kgp='kg pod'
+alias kgd='kg deployments'
+alias kgr="kg replicationcontroller"
+alias kdp='kd pod'
+alias kdd='kd deployments'
+alias kdr="kd replicationcontroller"
+alias kc='kctl create -f'
 
 # ELIXIR and ERLANG
 alias mps="mix phoenix.server"
