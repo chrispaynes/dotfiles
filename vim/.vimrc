@@ -56,6 +56,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nmap <F6> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
+let NERDTreeWinSize=75
+let NERDTreeShowLineNumbers=1
 
 Plugin 'sjl/badwolf'
 
