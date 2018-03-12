@@ -1,3 +1,4 @@
+set background=dark
 syntax enable
 
 " Spaces And Tabs
@@ -19,10 +20,6 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
-" Store swaps in tmp
-set swapfile
-set dir=~/tmp
 
 " VUNDLE
 set nocompatible              " be iMproved, required
@@ -62,6 +59,9 @@ let NERDTreeShowHidden=1
 let NERDTreeWinSize=75
 let NERDTreeShowLineNumbers=1
 
+Plugin 'lokaltog/vim-distinguished'
+colorscheme distinguished
+
 Plugin 'sjl/badwolf'
 
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -81,3 +81,4 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 set shell=zsh
+:highlight Normal ctermfg=grey ctermbg=none
