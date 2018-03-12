@@ -20,6 +20,9 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" Store swaps in tmp
+set swapfile
+set dir=~/tmp
 
 " VUNDLE
 set nocompatible              " be iMproved, required
