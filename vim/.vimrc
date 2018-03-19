@@ -9,6 +9,7 @@ retab
 
 " UI Config
 set cursorline
+set cursorcolumn
 set relativenumber
 
 " Custom Movements
