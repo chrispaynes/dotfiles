@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Blackboard",
+    "editor.fontSize": 10,
+    "window.zoomLevel": 0,
+    "extensions.ignoreRecommendations": false,
+    "editor.minimap.enabled": false,
+    "gitlens.keymap": "alternate",
+    "guides.enabled": true,
+    "guides.overrideDefault": true,
+    "editor.renderIndentGuides": true,
+    "terminal.integrated.fontFamily": "'Source Code Pro for Powerline'",
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace"
+}
