@@ -1,5 +1,6 @@
 # DOCKER
 alias dk=docker
+alias dc=docker-compose
 
 # KUBERNETES
 alias kctl='kubectl'
@@ -13,12 +14,7 @@ alias kdd='kd deployments'
 alias kdr="kd replicationcontroller"
 alias kc='kctl create -f'
 
-# ELIXIR and ERLANG
-alias mps="mix phoenix.server"
-
 # GIT
-alias git.logPretty="git log --pretty=oneline"
-alias git.logGraph="--pretty=oneline --graph --decorate --all"
 alias gl="git log --stat"
 alias gb="git branch"
 alias gco="git checkout"
@@ -41,18 +37,8 @@ ga() { git add "$1"; git status; };
 # grm removes a file arg from the index.
 grm() { git rm "$1"; git status; };
 
-# GOLANG
-alias go.play="echo 'Go play on http://localhost:1337' && godoc -http=:1337 -play -index" 
-
 # NETWORKING
 alias ports='netstat -tulanp'
-
-# POSTGRESL
-alias pg.start="sudo /etc/init.d/postgresql start"
-alias pg.stop="sudo /etc/init.d/postgresql stop"
-alias pg.restart="sudo /etc/init.d/postgresql restart"
-alias pg.conf_backup="cp pg_hba.conf pg_hba.conf-backup"
-alias pg.connect="psql -h 127.0.0.1 -U postgres"
 
 # SYSTEM
 alias sctl=systemctl
@@ -60,10 +46,6 @@ alias sctl=systemctl
 # TERMINAL
 alias ll="ls -lahFGo"
 alias hg="history | grep "
-alias eza="vim ~/.zsh_aliases"
-alias szsh="source ~/.zsh_*"
 alias ..="cd .. && ls"
 alias op="open ."
 alias t.="tree ."
-
-# UTILITY
