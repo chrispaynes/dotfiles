@@ -1,6 +1,7 @@
 # DOCKER
 alias dk=docker
 alias dc=docker-compose
+alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}\t{{.Status}}"'
 
 # KUBERNETES
 alias kctl='kubectl'
