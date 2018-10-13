@@ -23,7 +23,7 @@ alias untar='tar xvf'
 
 # DOCKER
 alias d=docker
-alias dconts="'docker ps | awk 'NR > 1 {print $1}' | xargs"
+alias dconts='docker ps | awk '\''NR > 1 {print $1}'\'' | xargs'
 alias dsp="docker system prune -a"
 alias dc=docker-compose
 alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}\t{{.Status}}"'
