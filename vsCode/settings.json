@@ -1,20 +1,31 @@
 {
     "workbench.colorTheme": "Blackboard",
-    "editor.fontSize": 10,
+    "editor.fontSize": 12,
     "editor.multiCursorModifier": "ctrlCmd",
     "window.zoomLevel": 0,
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "editor.minimap.enabled": false,
-    "gitlens.keymap": "alternate",
+    "gitlens.keymap": "chorded",
     "guides.enabled": true,
     "guides.overrideDefault": true,
     "editor.renderIndentGuides": true,
     "terminal.integrated.fontFamily": "'Source Code Pro for Powerline'",
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
     "explorer.confirmDragAndDrop": false,
     "workbench.iconTheme": "material-icon-theme",
     "editor.wordWrapColumn": 100,
     "editor.rulers": [
         100
-    ]
+    ],
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "explorer.confirmDelete": false,
+    "yaml.format.enable": true,
+    "python.pythonPath": "python3",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django"
+    ],
+    "terminal.integrated.shell.linux": "/bin/zsh"
 }
