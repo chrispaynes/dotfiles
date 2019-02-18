@@ -44,7 +44,7 @@ alias gcane="g commit --amend --no-edit"
 
 # GIT FUNCTIONS
 # gcmsg writes a commit message.
-gcmsg() { git commit -m  "$1"; git status };
+gcmsg() { git commit -m  "$1"; git status; };
 
 # grH resets an file arg. to the last commit snapshot.
 grH() { git reset HEAD "$1"; git status; };
