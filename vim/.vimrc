@@ -3,8 +3,8 @@ syntax enable
 
 " Spaces And Tabs
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 retab
 
 " UI Config
@@ -15,6 +15,9 @@ set relativenumber
 " Custom Movements
 nnoremap B ^
 nnoremap E $
+
+" Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " Disabled Keys
 noremap <Up> <NOP>
@@ -33,22 +36,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-Plugin 'hashivim/vim-terraform'
-
 Plugin 'fatih/vim-go'
-
-Plugin 'elixir-editors/vim-elixir'
-
-Plugin 'godlygeek/tabular'
 
 Plugin 'plasticboy/vim-markdown'
 
@@ -57,13 +48,11 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nmap <C-b> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-let NERDTreeWinSize=75
+let NERDTreeWinSize=50
 let NERDTreeShowLineNumbers=1
 
 Plugin 'lokaltog/vim-distinguished'
 colorscheme distinguished
-
-Plugin 'sjl/badwolf'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -72,6 +61,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup = 0
 
 Plugin 'w0rp/ale'
 
@@ -82,4 +72,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 set shell=zsh
-:highlight Normal ctermfg=grey ctermbg=none
+set noswapfile
+set nowrap
+highlight clear LineNr
+highlight clear SignColumn
